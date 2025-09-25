@@ -9,6 +9,12 @@ data = {
 
 df = pd.DataFrame(data)
 
+#adding new row to be appended
+new_row = {'Name': 'F1', 'Age': 20, 'City': 'C1'}
+
+df.loc[len(df.index)] = new_row
+
+
 data_dir = 'data'
 os.makedirs(data_dir, exist_ok=True)
 
